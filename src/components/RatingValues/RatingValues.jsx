@@ -23,14 +23,4 @@ function RatingValues({ value, setValue }) {
   );
 }
 
-function mouseOnAction(e) {
-  const prevElement = e.target.previousElementSibling;
-  prevElement ? prevElement.classList.add("prevElemntHover") : void 0;
-}
-
-function mouseleftAction(e) {
-  const prevElement = e.target.previousElementSibling;
-  prevElement ? prevElement.classList.remove("prevElemntHover") : void 0;
-}
-
 export default RatingValues;
