@@ -1,7 +1,7 @@
 import React from "react";
 import "./RatingValuesStyle.css";
 
-function RatingValues({ setValue }) {
+function RatingValues({ value, setValue }) {
   // function RatingValues() {
   function clickRate(e) {
     const rateValue = e.target.innerHTML;
@@ -17,48 +17,9 @@ function RatingValues({ setValue }) {
   }
 
   return (
-    <div className="rating">
-      <span
-        className="ratingValue"
-        onMouseEnter={mouseOnAction}
-        onMouseLeave={mouseleftAction}
-        onClick={clickRate}
-      >
-        1
-      </span>
-      <span
-        className="ratingValue"
-        onMouseEnter={mouseOnAction}
-        onMouseLeave={mouseleftAction}
-        onClick={clickRate}
-      >
-        2
-      </span>
-      <span
-        className="ratingValue"
-        onMouseEnter={mouseOnAction}
-        onMouseLeave={mouseleftAction}
-        onClick={clickRate}
-      >
-        3
-      </span>
-      <span
-        className="ratingValue"
-        onMouseEnter={mouseOnAction}
-        onMouseLeave={mouseleftAction}
-        onClick={clickRate}
-      >
-        4
-      </span>
-      <span
-        className="ratingValue"
-        onMouseEnter={mouseOnAction}
-        onMouseLeave={mouseleftAction}
-        onClick={clickRate}
-      >
-        5
-      </span>
-    </div>
+    <span className="ratingValue" onClick={clickRate}>
+      {value}
+    </span>
   );
 }
 
